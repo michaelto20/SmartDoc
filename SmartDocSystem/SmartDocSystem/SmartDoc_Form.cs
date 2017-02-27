@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using SmartDocSystem;
+
 namespace SmartDocSystem
 {
     public partial class SmartDocSystem : Form
@@ -20,7 +22,7 @@ namespace SmartDocSystem
             this.mainLayoutPanel.Controls.Add(fieldgrp);
         }
         
-        private void Plusbtn_Click_1(object sender, EventArgs e)
+        private void Plusbtn_Click(object sender, EventArgs e)
         {
             GroupBox fieldgrp = CreateGroupBox();
             this.mainLayoutPanel.Controls.Add(fieldgrp);
@@ -30,93 +32,92 @@ namespace SmartDocSystem
         private GroupBox CreateGroupBox()
         {
             GroupBox newGrpBox = new GroupBox();
-            CheckBox checkBox1 = new CheckBox();
-            ComboBox comboBox1 = new ComboBox();
-            Label label1 = new Label();
-            Label label2 = new Label();
-            ComboBox comboBox2 = new ComboBox();
-            TextBox textBox2 = new TextBox();
-            Label label3 = new Label();
+            CheckBox RequiredChkbx = new CheckBox();
+            ComboBox AnswerTypeDDbx = new ComboBox();
+            Label AnswerTypeLbl = new Label();
+            Label DatatypeLbl = new Label();
+            ComboBox DataTypeDDbx = new ComboBox();
+            TextBox FieldNameTxtbx = new TextBox();
+            Label FieldNameLbl = new Label();
 
             // 
             // checkBox1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new System.Drawing.Point(742, 37);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new System.Drawing.Size(122, 21);
-            checkBox1.TabIndex = 16;
-            checkBox1.Text = "Required Field";
-            checkBox1.UseVisualStyleBackColor = true;
+            RequiredChkbx.AutoSize = true;
+            RequiredChkbx.Location = new System.Drawing.Point(742, 37);
+            RequiredChkbx.Name = "RequiredChkbx";
+            RequiredChkbx.Size = new System.Drawing.Size(122, 21);
+            RequiredChkbx.TabIndex = 16;
+            RequiredChkbx.Text = "Required Field";
+            RequiredChkbx.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
-            comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            comboBox1.Items.AddRange(new object[] {
+            AnswerTypeDDbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            AnswerTypeDDbx.Items.AddRange(new object[] {
             "Short Answer",
             "Paragraph Answer"});
-            comboBox1.Location = new System.Drawing.Point(581, 37);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new System.Drawing.Size(151, 24);
-            comboBox1.TabIndex = 15;
+            AnswerTypeDDbx.Location = new System.Drawing.Point(581, 37);
+            AnswerTypeDDbx.Name = "AnswerTypeDDbx";
+            AnswerTypeDDbx.Size = new System.Drawing.Size(151, 24);
+            AnswerTypeDDbx.TabIndex = 15;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(490, 40);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(94, 17);
-            label1.TabIndex = 14;
-            label1.Text = "Answer Type:";
+            AnswerTypeLbl.AutoSize = true;
+            AnswerTypeLbl.Location = new System.Drawing.Point(490, 40);
+            AnswerTypeLbl.Name = "AnswerTypeLbl";
+            AnswerTypeLbl.Size = new System.Drawing.Size(94, 17);
+            AnswerTypeLbl.TabIndex = 14;
+            AnswerTypeLbl.Text = "Answer Type:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(281, 41);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(69, 17);
-            label2.TabIndex = 13;
-            label2.Text = "Datatype:";
+            DatatypeLbl.AutoSize = true;
+            DatatypeLbl.Location = new System.Drawing.Point(281, 41);
+            DatatypeLbl.Name = "DatatypeLbl";
+            DatatypeLbl.Size = new System.Drawing.Size(69, 17);
+            DatatypeLbl.TabIndex = 13;
+            DatatypeLbl.Text = "Datatype:";
             // 
             // comboBox2
             // 
-            comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] {
+            DataTypeDDbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            DataTypeDDbx.FormattingEnabled = true;
+            DataTypeDDbx.Items.AddRange(new object[] {
             "Integer",
-            "Double",
             "String"});
-            comboBox2.Location = new System.Drawing.Point(353, 39);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new System.Drawing.Size(121, 24);
-            comboBox2.TabIndex = 12;
+            DataTypeDDbx.Location = new System.Drawing.Point(353, 39);
+            DataTypeDDbx.Name = "DataTypeDDbx";
+            DataTypeDDbx.Size = new System.Drawing.Size(121, 24);
+            DataTypeDDbx.TabIndex = 12;
             // 
             // textBox2
             // 
-            textBox2.Location = new System.Drawing.Point(89, 41);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(175, 22);
-            textBox2.TabIndex = 11;
+            FieldNameTxtbx.Location = new System.Drawing.Point(89, 41);
+            FieldNameTxtbx.Name = "FieldNameTxtbx";
+            FieldNameTxtbx.Size = new System.Drawing.Size(175, 22);
+            FieldNameTxtbx.TabIndex = 11;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(4, 41);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(83, 17);
-            label3.TabIndex = 10;
-            label3.Text = "Field Name:";
+            FieldNameLbl.AutoSize = true;
+            FieldNameLbl.Location = new System.Drawing.Point(4, 41);
+            FieldNameLbl.Name = "FieldNameLbl";
+            FieldNameLbl.Size = new System.Drawing.Size(83, 17);
+            FieldNameLbl.TabIndex = 10;
+            FieldNameLbl.Text = "Field Name:";
 
             // 
             // FieldGrp
             // 
             newGrpBox.Controls.Add(checkBox1);
-            newGrpBox.Controls.Add(comboBox1);
-            newGrpBox.Controls.Add(label1);
-            newGrpBox.Controls.Add(label2);
-            newGrpBox.Controls.Add(comboBox2);
-            newGrpBox.Controls.Add(textBox2);
-            newGrpBox.Controls.Add(label3);
+            newGrpBox.Controls.Add(AnswerTypeDDbx);
+            newGrpBox.Controls.Add(AnswerTypeLbl);
+            newGrpBox.Controls.Add(DatatypeLbl);
+            newGrpBox.Controls.Add(DataTypeDDbx);
+            newGrpBox.Controls.Add(FieldNameTxtbx);
+            newGrpBox.Controls.Add(FieldNameLbl);
             newGrpBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             newGrpBox.Location = new System.Drawing.Point(114, 90);
             newGrpBox.Name = "FieldGrp";
@@ -126,7 +127,60 @@ namespace SmartDocSystem
             newGrpBox.Text = "Field";
             return newGrpBox;
         }
+
+        private void Createbtn_Click(object sender, EventArgs e)
+        {
+            // Validate that form has been fully filled out
+            bool isFilledOut = true;
+            var AllFieldTxtBxArr = this.Controls.Find("FieldNameTxtbx", true);
+            var URLTxtbxArr = this.Controls.Find("URLtxtbx", true);
+            var TableNameTxtbxArr = this.Controls.Find("TableNameTxtbx", true);
+            var DataTypeDDbxArr = this.Controls.Find("DataTypeDDbx", true);
+            var AnswerTypeDDbxArr = this.Controls.Find("AnswerTypeDDbx", true);
+            foreach(var elem in AllFieldTxtBxArr)
+            {
+                if (string.IsNullOrWhiteSpace(elem.Text))
+                    isFilledOut = false;
+            }
+            foreach (var elem in URLTxtbxArr)
+            {
+                if (string.IsNullOrWhiteSpace(elem.Text))
+                    isFilledOut = false;
+            }
+            foreach (var elem in TableNameTxtbxArr)
+            {
+                if (string.IsNullOrWhiteSpace(elem.Text))
+                    isFilledOut = false;
+            }
+            foreach (var elem in DataTypeDDbxArr)
+            {
+                if (string.IsNullOrWhiteSpace(elem.Text))
+                    isFilledOut = false;
+            }
+            foreach (var elem in AnswerTypeDDbxArr)
+            {
+                if (string.IsNullOrWhiteSpace(elem.Text))
+                    isFilledOut = false;
+            }
+            //if (isFilledOut)
+            //{
+            //    MessageBox.Show("You correctly filled out the form!");
+            //    SmartDoc.MakeSmartDoc();
+                
+            //}
+            //else
+            //{
+            //    MessageBox.Show("You DID NOT correctly filled out the form!");
+            //}
+            SmartDoc.MakeSmartDoc();
+        }
+
         
+
+        private void Cancelbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 

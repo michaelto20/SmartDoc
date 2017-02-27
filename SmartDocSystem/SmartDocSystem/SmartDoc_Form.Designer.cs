@@ -46,9 +46,13 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TableNamelbl = new System.Windows.Forms.Label();
+            this.TableNameTxtbx = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.mainLayoutPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
@@ -93,12 +97,11 @@
             this.Plusbtn.Size = new System.Drawing.Size(45, 45);
             this.Plusbtn.TabIndex = 3;
             this.Plusbtn.UseVisualStyleBackColor = true;
-            this.Plusbtn.Click += new System.EventHandler(this.Plusbtn_Click_1);
+            this.Plusbtn.Click += new System.EventHandler(this.Plusbtn_Click);
             // 
             // Createbtn
             // 
             this.Createbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Createbtn.Enabled = false;
             this.Createbtn.Location = new System.Drawing.Point(857, 530);
             this.Createbtn.Name = "Createbtn";
             this.Createbtn.Padding = new System.Windows.Forms.Padding(5);
@@ -106,6 +109,7 @@
             this.Createbtn.TabIndex = 5;
             this.Createbtn.Text = "Create Smart Doc";
             this.Createbtn.UseVisualStyleBackColor = false;
+            this.Createbtn.Click += new System.EventHandler(this.Createbtn_Click);
             // 
             // Cancelbtn
             // 
@@ -117,11 +121,13 @@
             this.Cancelbtn.TabIndex = 6;
             this.Cancelbtn.Text = "Cancel";
             this.Cancelbtn.UseVisualStyleBackColor = false;
+            this.Cancelbtn.Click += new System.EventHandler(this.Cancelbtn_Click);
             // 
             // mainLayoutPanel
             // 
             this.mainLayoutPanel.AutoScroll = true;
             this.mainLayoutPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.mainLayoutPanel.Controls.Add(this.groupBox2);
             this.mainLayoutPanel.Controls.Add(this.groupBox1);
             this.mainLayoutPanel.Location = new System.Drawing.Point(119, 98);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
@@ -132,17 +138,16 @@
             // 
             this.groupBox1.Controls.Add(this.URLlbl);
             this.groupBox1.Controls.Add(this.URLtxtbx);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 77);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(973, 68);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // URLlbl
             // 
             this.URLlbl.AutoSize = true;
-            this.URLlbl.Location = new System.Drawing.Point(6, 36);
+            this.URLlbl.Location = new System.Drawing.Point(6, 30);
             this.URLlbl.Name = "URLlbl";
             this.URLlbl.Size = new System.Drawing.Size(169, 17);
             this.URLlbl.TabIndex = 11;
@@ -150,7 +155,7 @@
             // 
             // URLtxtbx
             // 
-            this.URLtxtbx.Location = new System.Drawing.Point(181, 31);
+            this.URLtxtbx.Location = new System.Drawing.Point(181, 29);
             this.URLtxtbx.Name = "URLtxtbx";
             this.URLtxtbx.Size = new System.Drawing.Size(780, 22);
             this.URLtxtbx.TabIndex = 12;
@@ -208,7 +213,6 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Integer",
-            "Double",
             "String"});
             this.comboBox2.Location = new System.Drawing.Point(353, 39);
             this.comboBox2.Name = "comboBox2";
@@ -231,6 +235,32 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Field Name:";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.TableNameTxtbx);
+            this.groupBox2.Controls.Add(this.TableNamelbl);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(359, 68);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            // 
+            // TableNamelbl
+            // 
+            this.TableNamelbl.AutoSize = true;
+            this.TableNamelbl.Location = new System.Drawing.Point(7, 28);
+            this.TableNamelbl.Name = "TableNamelbl";
+            this.TableNamelbl.Size = new System.Drawing.Size(85, 17);
+            this.TableNamelbl.TabIndex = 0;
+            this.TableNamelbl.Text = "Table Name";
+            // 
+            // TableNameTxtbx
+            // 
+            this.TableNameTxtbx.Location = new System.Drawing.Point(99, 24);
+            this.TableNameTxtbx.Name = "TableNameTxtbx";
+            this.TableNameTxtbx.Size = new System.Drawing.Size(254, 22);
+            this.TableNameTxtbx.TabIndex = 1;
+            // 
             // SmartDocSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -248,6 +278,8 @@
             this.mainLayoutPanel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,6 +304,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label URLlbl;
         private System.Windows.Forms.TextBox URLtxtbx;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox TableNameTxtbx;
+        private System.Windows.Forms.Label TableNamelbl;
     }
 }
 
