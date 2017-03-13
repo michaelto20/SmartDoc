@@ -29,30 +29,32 @@
         private void InitializeComponent()
         {
             this.Title = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ToolboxTxtbx = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Plusbtn = new System.Windows.Forms.Button();
             this.Createbtn = new System.Windows.Forms.Button();
             this.Cancelbtn = new System.Windows.Forms.Button();
             this.mainLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.URLlbl = new System.Windows.Forms.Label();
-            this.URLtxtbx = new System.Windows.Forms.TextBox();
-            this.FieldGrp = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.DBNameTxtbx = new System.Windows.Forms.TextBox();
+            this.DBNamelbl = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.TableNamelbl = new System.Windows.Forms.Label();
             this.TableNameTxtbx = new System.Windows.Forms.TextBox();
+            this.TableNamelbl = new System.Windows.Forms.Label();
+            this.FieldGrpBx = new System.Windows.Forms.GroupBox();
+            this.RequiredChkbx = new System.Windows.Forms.CheckBox();
+            this.DataTypeDDbx = new System.Windows.Forms.ComboBox();
+            this.Datatypelbl = new System.Windows.Forms.Label();
+            this.DBFieldNameTxtbx = new System.Windows.Forms.TextBox();
+            this.DBFieldNamelbl = new System.Windows.Forms.Label();
+            this.FieldGrp = new System.Windows.Forms.GroupBox();
+            this.DisplayFieldNamelbl = new System.Windows.Forms.Label();
+            this.DisplayNameTxtbx = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.mainLayoutPanel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.FieldGrpBx.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
@@ -63,27 +65,29 @@
             this.Title.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Title.Location = new System.Drawing.Point(119, 12);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(1213, 49);
+            this.Title.Size = new System.Drawing.Size(958, 49);
             this.Title.TabIndex = 1;
+            this.Title.TabStop = false;
             this.Title.Text = "Smart Document System";
             this.Title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // ToolboxTxtbx
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(2, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(63, 15);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Tool Box";
+            this.ToolboxTxtbx.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ToolboxTxtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ToolboxTxtbx.Location = new System.Drawing.Point(2, 3);
+            this.ToolboxTxtbx.Name = "ToolboxTxtbx";
+            this.ToolboxTxtbx.Size = new System.Drawing.Size(63, 15);
+            this.ToolboxTxtbx.TabIndex = 0;
+            this.ToolboxTxtbx.TabStop = false;
+            this.ToolboxTxtbx.Text = "Tool Box";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.Plusbtn);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.ToolboxTxtbx);
             this.panel1.Location = new System.Drawing.Point(8, 75);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(69, 162);
@@ -95,14 +99,15 @@
             this.Plusbtn.Location = new System.Drawing.Point(8, 32);
             this.Plusbtn.Name = "Plusbtn";
             this.Plusbtn.Size = new System.Drawing.Size(45, 45);
-            this.Plusbtn.TabIndex = 3;
+            this.Plusbtn.TabIndex = 0;
+            this.Plusbtn.TabStop = false;
             this.Plusbtn.UseVisualStyleBackColor = true;
             this.Plusbtn.Click += new System.EventHandler(this.Plusbtn_Click);
             // 
             // Createbtn
             // 
             this.Createbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Createbtn.Location = new System.Drawing.Point(857, 530);
+            this.Createbtn.Location = new System.Drawing.Point(728, 530);
             this.Createbtn.Name = "Createbtn";
             this.Createbtn.Padding = new System.Windows.Forms.Padding(5);
             this.Createbtn.Size = new System.Drawing.Size(138, 33);
@@ -114,7 +119,7 @@
             // Cancelbtn
             // 
             this.Cancelbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Cancelbtn.Location = new System.Drawing.Point(406, 530);
+            this.Cancelbtn.Location = new System.Drawing.Point(361, 530);
             this.Cancelbtn.Name = "Cancelbtn";
             this.Cancelbtn.Padding = new System.Windows.Forms.Padding(5);
             this.Cancelbtn.Size = new System.Drawing.Size(75, 33);
@@ -127,123 +132,56 @@
             // 
             this.mainLayoutPanel.AutoScroll = true;
             this.mainLayoutPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.mainLayoutPanel.Controls.Add(this.groupBox3);
             this.mainLayoutPanel.Controls.Add(this.groupBox2);
-            this.mainLayoutPanel.Controls.Add(this.groupBox1);
+            this.mainLayoutPanel.Controls.Add(this.FieldGrpBx);
             this.mainLayoutPanel.Location = new System.Drawing.Point(119, 98);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
-            this.mainLayoutPanel.Size = new System.Drawing.Size(1213, 407);
+            this.mainLayoutPanel.Size = new System.Drawing.Size(958, 407);
             this.mainLayoutPanel.TabIndex = 7;
             // 
-            // groupBox1
+            // groupBox3
             // 
-            this.groupBox1.Controls.Add(this.URLlbl);
-            this.groupBox1.Controls.Add(this.URLtxtbx);
-            this.groupBox1.Location = new System.Drawing.Point(3, 77);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(973, 68);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
+            this.groupBox3.Controls.Add(this.DBNameTxtbx);
+            this.groupBox3.Controls.Add(this.DBNamelbl);
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(459, 68);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
             // 
-            // URLlbl
+            // DBNameTxtbx
             // 
-            this.URLlbl.AutoSize = true;
-            this.URLlbl.Location = new System.Drawing.Point(6, 30);
-            this.URLlbl.Name = "URLlbl";
-            this.URLlbl.Size = new System.Drawing.Size(169, 17);
-            this.URLlbl.TabIndex = 11;
-            this.URLlbl.Text = "URL for housing XML file:";
+            this.DBNameTxtbx.Location = new System.Drawing.Point(120, 23);
+            this.DBNameTxtbx.Name = "DBNameTxtbx";
+            this.DBNameTxtbx.Size = new System.Drawing.Size(328, 22);
+            this.DBNameTxtbx.TabIndex = 1;
             // 
-            // URLtxtbx
+            // DBNamelbl
             // 
-            this.URLtxtbx.Location = new System.Drawing.Point(181, 29);
-            this.URLtxtbx.Name = "URLtxtbx";
-            this.URLtxtbx.Size = new System.Drawing.Size(780, 22);
-            this.URLtxtbx.TabIndex = 12;
-            // 
-            // FieldGrp
-            // 
-            this.FieldGrp.Location = new System.Drawing.Point(0, 0);
-            this.FieldGrp.Name = "FieldGrp";
-            this.FieldGrp.Size = new System.Drawing.Size(200, 100);
-            this.FieldGrp.TabIndex = 0;
-            this.FieldGrp.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(742, 37);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(122, 21);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Required Field";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Short Answer",
-            "Paragraph Answer"});
-            this.comboBox1.Location = new System.Drawing.Point(581, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 25);
-            this.comboBox1.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(490, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 17);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Answer Type:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(281, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Datatype:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Integer",
-            "String"});
-            this.comboBox2.Location = new System.Drawing.Point(353, 39);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 25);
-            this.comboBox2.TabIndex = 12;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(89, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 22);
-            this.textBox2.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Field Name:";
+            this.DBNamelbl.AutoSize = true;
+            this.DBNamelbl.Location = new System.Drawing.Point(3, 24);
+            this.DBNamelbl.Name = "DBNamelbl";
+            this.DBNamelbl.Size = new System.Drawing.Size(110, 17);
+            this.DBNamelbl.TabIndex = 0;
+            this.DBNamelbl.Text = "Database Name";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.TableNameTxtbx);
             this.groupBox2.Controls.Add(this.TableNamelbl);
-            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Location = new System.Drawing.Point(468, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(359, 68);
-            this.groupBox2.TabIndex = 15;
+            this.groupBox2.Size = new System.Drawing.Size(430, 68);
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
+            // 
+            // TableNameTxtbx
+            // 
+            this.TableNameTxtbx.Location = new System.Drawing.Point(99, 24);
+            this.TableNameTxtbx.Name = "TableNameTxtbx";
+            this.TableNameTxtbx.Size = new System.Drawing.Size(317, 22);
+            this.TableNameTxtbx.TabIndex = 2;
             // 
             // TableNamelbl
             // 
@@ -254,18 +192,98 @@
             this.TableNamelbl.TabIndex = 0;
             this.TableNamelbl.Text = "Table Name";
             // 
-            // TableNameTxtbx
+            // FieldGrpBx
             // 
-            this.TableNameTxtbx.Location = new System.Drawing.Point(99, 24);
-            this.TableNameTxtbx.Name = "TableNameTxtbx";
-            this.TableNameTxtbx.Size = new System.Drawing.Size(254, 22);
-            this.TableNameTxtbx.TabIndex = 1;
+            this.FieldGrpBx.Controls.Add(this.DisplayNameTxtbx);
+            this.FieldGrpBx.Controls.Add(this.DisplayFieldNamelbl);
+            this.FieldGrpBx.Controls.Add(this.RequiredChkbx);
+            this.FieldGrpBx.Controls.Add(this.DataTypeDDbx);
+            this.FieldGrpBx.Controls.Add(this.Datatypelbl);
+            this.FieldGrpBx.Controls.Add(this.DBFieldNameTxtbx);
+            this.FieldGrpBx.Controls.Add(this.DBFieldNamelbl);
+            this.FieldGrpBx.Location = new System.Drawing.Point(3, 77);
+            this.FieldGrpBx.Name = "FieldGrpBx";
+            this.FieldGrpBx.Size = new System.Drawing.Size(895, 100);
+            this.FieldGrpBx.TabIndex = 0;
+            this.FieldGrpBx.TabStop = false;
+            this.FieldGrpBx.Text = "Field";
+            // 
+            // RequiredChkbx
+            // 
+            this.RequiredChkbx.AutoSize = true;
+            this.RequiredChkbx.Location = new System.Drawing.Point(735, 34);
+            this.RequiredChkbx.Name = "RequiredChkbx";
+            this.RequiredChkbx.Size = new System.Drawing.Size(88, 21);
+            this.RequiredChkbx.TabIndex = 6;
+            this.RequiredChkbx.Text = "Required";
+            this.RequiredChkbx.UseVisualStyleBackColor = true;
+            // 
+            // DataTypeDDbx
+            // 
+            this.DataTypeDDbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DataTypeDDbx.FormattingEnabled = true;
+            this.DataTypeDDbx.Items.AddRange(new object[] {
+            "String",
+            "Integer"});
+            this.DataTypeDDbx.Location = new System.Drawing.Point(512, 33);
+            this.DataTypeDDbx.Name = "DataTypeDDbx";
+            this.DataTypeDDbx.Size = new System.Drawing.Size(135, 24);
+            this.DataTypeDDbx.TabIndex = 5;
+            // 
+            // Datatypelbl
+            // 
+            this.Datatypelbl.AutoSize = true;
+            this.Datatypelbl.Location = new System.Drawing.Point(440, 36);
+            this.Datatypelbl.Name = "Datatypelbl";
+            this.Datatypelbl.Size = new System.Drawing.Size(65, 17);
+            this.Datatypelbl.TabIndex = 2;
+            this.Datatypelbl.Text = "Datatype";
+            // 
+            // DBFieldNameTxtbx
+            // 
+            this.DBFieldNameTxtbx.Location = new System.Drawing.Point(133, 24);
+            this.DBFieldNameTxtbx.Name = "DBFieldNameTxtbx";
+            this.DBFieldNameTxtbx.Size = new System.Drawing.Size(285, 22);
+            this.DBFieldNameTxtbx.TabIndex = 3;
+            // 
+            // DBFieldNamelbl
+            // 
+            this.DBFieldNamelbl.AutoSize = true;
+            this.DBFieldNamelbl.Location = new System.Drawing.Point(17, 28);
+            this.DBFieldNamelbl.Name = "DBFieldNamelbl";
+            this.DBFieldNamelbl.Size = new System.Drawing.Size(110, 17);
+            this.DBFieldNamelbl.TabIndex = 0;
+            this.DBFieldNamelbl.Text = "Database Name";
+            // 
+            // FieldGrp
+            // 
+            this.FieldGrp.Location = new System.Drawing.Point(0, 0);
+            this.FieldGrp.Name = "FieldGrp";
+            this.FieldGrp.Size = new System.Drawing.Size(200, 100);
+            this.FieldGrp.TabIndex = 0;
+            this.FieldGrp.TabStop = false;
+            // 
+            // DisplayFieldNamelbl
+            // 
+            this.DisplayFieldNamelbl.AutoSize = true;
+            this.DisplayFieldNamelbl.Location = new System.Drawing.Point(17, 65);
+            this.DisplayFieldNamelbl.Name = "DisplayFieldNamelbl";
+            this.DisplayFieldNamelbl.Size = new System.Drawing.Size(95, 17);
+            this.DisplayFieldNamelbl.TabIndex = 6;
+            this.DisplayFieldNamelbl.Text = "Display Name";
+            // 
+            // DisplayNameTxtbx
+            // 
+            this.DisplayNameTxtbx.Location = new System.Drawing.Point(133, 64);
+            this.DisplayNameTxtbx.Name = "DisplayNameTxtbx";
+            this.DisplayNameTxtbx.Size = new System.Drawing.Size(285, 22);
+            this.DisplayNameTxtbx.TabIndex = 4;
             // 
             // SmartDocSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1406, 606);
+            this.ClientSize = new System.Drawing.Size(1177, 606);
             this.Controls.Add(this.mainLayoutPanel);
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.Createbtn);
@@ -276,10 +294,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.mainLayoutPanel.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.FieldGrpBx.ResumeLayout(false);
+            this.FieldGrpBx.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,26 +307,27 @@
 
         #endregion
         private System.Windows.Forms.TextBox Title;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ToolboxTxtbx;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Createbtn;
         private System.Windows.Forms.Button Cancelbtn;
         private System.Windows.Forms.Button Plusbtn;
         private System.Windows.Forms.FlowLayoutPanel mainLayoutPanel;
         private System.Windows.Forms.GroupBox FieldGrp;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label URLlbl;
-        private System.Windows.Forms.TextBox URLtxtbx;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox TableNameTxtbx;
         private System.Windows.Forms.Label TableNamelbl;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox DBNameTxtbx;
+        private System.Windows.Forms.Label DBNamelbl;
+        private System.Windows.Forms.GroupBox FieldGrpBx;
+        private System.Windows.Forms.Label DBFieldNamelbl;
+        private System.Windows.Forms.CheckBox RequiredChkbx;
+        private System.Windows.Forms.ComboBox DataTypeDDbx;
+        private System.Windows.Forms.Label Datatypelbl;
+        private System.Windows.Forms.TextBox DBFieldNameTxtbx;
+        private System.Windows.Forms.Label DisplayFieldNamelbl;
+        private System.Windows.Forms.TextBox DisplayNameTxtbx;
     }
 }
 

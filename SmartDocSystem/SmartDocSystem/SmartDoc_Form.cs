@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using SmartDocSystem;
 
 namespace SmartDocSystem
 {
@@ -18,8 +17,8 @@ namespace SmartDocSystem
         public SmartDocSystem()
         {
             InitializeComponent();
-            GroupBox fieldgrp = CreateGroupBox();
-            this.mainLayoutPanel.Controls.Add(fieldgrp);
+            //GroupBox fieldgrp = CreateGroupBox();
+            //this.mainLayoutPanel.Controls.Add(fieldgrp);
         }
         
         private void Plusbtn_Click(object sender, EventArgs e)
@@ -33,96 +32,95 @@ namespace SmartDocSystem
         {
             GroupBox newGrpBox = new GroupBox();
             CheckBox RequiredChkbx = new CheckBox();
-            ComboBox AnswerTypeDDbx = new ComboBox();
-            Label AnswerTypeLbl = new Label();
             Label DatatypeLbl = new Label();
             ComboBox DataTypeDDbx = new ComboBox();
-            TextBox FieldNameTxtbx = new TextBox();
-            Label FieldNameLbl = new Label();
+            TextBox DBFieldNameTxtbx = new TextBox();
+            Label DBFieldNamelbl = new Label();
+            TextBox DisplayNameTxtbx = new TextBox();
+            Label DisplayFieldNamelbl = new Label();
 
             // 
             // checkBox1
             // 
             RequiredChkbx.AutoSize = true;
-            RequiredChkbx.Location = new System.Drawing.Point(742, 37);
+            RequiredChkbx.Location = new System.Drawing.Point(550, 37);
             RequiredChkbx.Name = "RequiredChkbx";
             RequiredChkbx.Size = new System.Drawing.Size(122, 21);
-            RequiredChkbx.TabIndex = 16;
-            RequiredChkbx.Text = "Required Field";
+            RequiredChkbx.TabIndex = 6;
+            RequiredChkbx.Text = "Required";
             RequiredChkbx.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            AnswerTypeDDbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            AnswerTypeDDbx.Items.AddRange(new object[] {
-            "Short Answer",
-            "Paragraph Answer"});
-            AnswerTypeDDbx.Location = new System.Drawing.Point(581, 37);
-            AnswerTypeDDbx.Name = "AnswerTypeDDbx";
-            AnswerTypeDDbx.Size = new System.Drawing.Size(151, 24);
-            AnswerTypeDDbx.TabIndex = 15;
-            // 
-            // label1
-            // 
-            AnswerTypeLbl.AutoSize = true;
-            AnswerTypeLbl.Location = new System.Drawing.Point(490, 40);
-            AnswerTypeLbl.Name = "AnswerTypeLbl";
-            AnswerTypeLbl.Size = new System.Drawing.Size(94, 17);
-            AnswerTypeLbl.TabIndex = 14;
-            AnswerTypeLbl.Text = "Answer Type:";
+            
+           
             // 
             // label2
             // 
             DatatypeLbl.AutoSize = true;
-            DatatypeLbl.Location = new System.Drawing.Point(281, 41);
+            DatatypeLbl.Location = new System.Drawing.Point(330, 41);
             DatatypeLbl.Name = "DatatypeLbl";
             DatatypeLbl.Size = new System.Drawing.Size(69, 17);
-            DatatypeLbl.TabIndex = 13;
-            DatatypeLbl.Text = "Datatype:";
+            DatatypeLbl.TabIndex = 0;
+            DatatypeLbl.Text = "Datatype";
             // 
             // comboBox2
             // 
             DataTypeDDbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             DataTypeDDbx.FormattingEnabled = true;
             DataTypeDDbx.Items.AddRange(new object[] {
-            "Integer",
-            "String"});
-            DataTypeDDbx.Location = new System.Drawing.Point(353, 39);
+            "String",
+            "Integer"});
+            DataTypeDDbx.Location = new System.Drawing.Point(383, 39);
             DataTypeDDbx.Name = "DataTypeDDbx";
-            DataTypeDDbx.Size = new System.Drawing.Size(121, 24);
-            DataTypeDDbx.TabIndex = 12;
+            DataTypeDDbx.Size = new System.Drawing.Size(105, 24);
+            DataTypeDDbx.TabIndex = 5;
             // 
             // textBox2
             // 
-            FieldNameTxtbx.Location = new System.Drawing.Point(89, 41);
-            FieldNameTxtbx.Name = "FieldNameTxtbx";
-            FieldNameTxtbx.Size = new System.Drawing.Size(175, 22);
-            FieldNameTxtbx.TabIndex = 11;
+            DBFieldNameTxtbx.Location = new System.Drawing.Point(100, 34);
+            DBFieldNameTxtbx.Name = "DBFieldNameTxtbx";
+            DBFieldNameTxtbx.Size = new System.Drawing.Size(215, 22);
+            DBFieldNameTxtbx.TabIndex = 3;
             // 
             // label3
             // 
-            FieldNameLbl.AutoSize = true;
-            FieldNameLbl.Location = new System.Drawing.Point(4, 41);
-            FieldNameLbl.Name = "FieldNameLbl";
-            FieldNameLbl.Size = new System.Drawing.Size(83, 17);
-            FieldNameLbl.TabIndex = 10;
-            FieldNameLbl.Text = "Field Name:";
+            DBFieldNamelbl.AutoSize = true;
+            DBFieldNamelbl.Location = new System.Drawing.Point(12, 37);
+            DBFieldNamelbl.Name = "DBFieldNamelbl";
+            DBFieldNamelbl.Size = new System.Drawing.Size(79, 17);
+            DBFieldNamelbl.TabIndex = 0;
+            DBFieldNamelbl.Text = "Database Name";
+
+            // 
+            // DisplayFieldNamelbl
+            // 
+            DisplayFieldNamelbl.AutoSize = true;
+            DisplayFieldNamelbl.Location = new System.Drawing.Point(12, 65);
+            DisplayFieldNamelbl.Name = "DisplayFieldNamelbl";
+            DisplayFieldNamelbl.Size = new System.Drawing.Size(79, 17);
+            DisplayFieldNamelbl.TabIndex = 0;
+            DisplayFieldNamelbl.Text = "Display Name";
+            // 
+            // DisplayNameTxtbx
+            // 
+            DisplayNameTxtbx.Location = new System.Drawing.Point(100, 64);
+            DisplayNameTxtbx.Name = "DisplayNameTxtbx";
+            DisplayNameTxtbx.Size = new System.Drawing.Size(215, 22);
+            DisplayNameTxtbx.TabIndex = 4;
 
             // 
             // FieldGrp
             // 
-            newGrpBox.Controls.Add(checkBox1);
-            newGrpBox.Controls.Add(AnswerTypeDDbx);
-            newGrpBox.Controls.Add(AnswerTypeLbl);
             newGrpBox.Controls.Add(DatatypeLbl);
             newGrpBox.Controls.Add(DataTypeDDbx);
-            newGrpBox.Controls.Add(FieldNameTxtbx);
-            newGrpBox.Controls.Add(FieldNameLbl);
+            newGrpBox.Controls.Add(DBFieldNameTxtbx);
+            newGrpBox.Controls.Add(DBFieldNamelbl);
+            newGrpBox.Controls.Add(RequiredChkbx);
+            newGrpBox.Controls.Add(DisplayNameTxtbx);
+            newGrpBox.Controls.Add(DisplayFieldNamelbl);
             newGrpBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            newGrpBox.Location = new System.Drawing.Point(114, 90);
+            newGrpBox.Location = new System.Drawing.Point(3, 77);
             newGrpBox.Name = "FieldGrp";
-            newGrpBox.Size = new System.Drawing.Size(870, 100);
-            newGrpBox.TabIndex = 10;
+            newGrpBox.Size = new System.Drawing.Size(670, 100);
+            newGrpBox.TabIndex = 0;
             newGrpBox.TabStop = false;
             newGrpBox.Text = "Field";
             return newGrpBox;
@@ -132,12 +130,23 @@ namespace SmartDocSystem
         {
             // Validate that form has been fully filled out
             bool isFilledOut = true;
-            var AllFieldTxtBxArr = this.Controls.Find("FieldNameTxtbx", true);
-            var URLTxtbxArr = this.Controls.Find("URLtxtbx", true);
+
+            // Gather field values
+            var DBNameTxtbxArr = this.Controls.Find("DBNameTxtbx",true);
             var TableNameTxtbxArr = this.Controls.Find("TableNameTxtbx", true);
+            var URLTxtbxArr = this.Controls.Find("URLtxtbx", true);
+            var DisplayNameTxtbxArr = this.Controls.Find("DisplayNameTxtbx", true);
+            var DBFieldNameTxtbxArr = this.Controls.Find("DBFieldNameTxtbx", true);
             var DataTypeDDbxArr = this.Controls.Find("DataTypeDDbx", true);
-            var AnswerTypeDDbxArr = this.Controls.Find("AnswerTypeDDbx", true);
-            foreach(var elem in AllFieldTxtBxArr)
+            var IsRequiredChkbxArr = this.Controls.Find("RequiredChkbx", true); 
+
+            foreach (var elem in DBNameTxtbxArr)
+            {
+                if (string.IsNullOrWhiteSpace(elem.Text))
+                    isFilledOut = false;
+            }
+
+            foreach(var elem in DisplayNameTxtbxArr)
             {
                 if (string.IsNullOrWhiteSpace(elem.Text))
                     isFilledOut = false;
@@ -157,22 +166,34 @@ namespace SmartDocSystem
                 if (string.IsNullOrWhiteSpace(elem.Text))
                     isFilledOut = false;
             }
-            foreach (var elem in AnswerTypeDDbxArr)
+            foreach (var elem in DBFieldNameTxtbxArr)
             {
                 if (string.IsNullOrWhiteSpace(elem.Text))
                     isFilledOut = false;
             }
-            //if (isFilledOut)
-            //{
-            //    MessageBox.Show("You correctly filled out the form!");
-            //    SmartDoc.MakeSmartDoc();
-                
-            //}
-            //else
-            //{
-            //    MessageBox.Show("You DID NOT correctly filled out the form!");
-            //}
-            SmartDoc.MakeSmartDoc();
+
+            if (isFilledOut)
+            {
+                // Make smart doc
+                List<Field> fields = new List<Field>();
+                for (int i = 0; i < DisplayNameTxtbxArr.Length; i++)
+                {
+                    Field field = new Field();
+                    field.DisplayName = DisplayNameTxtbxArr[i].Text;
+                    field.DataType = DataTypeDDbxArr[i].Text;
+                    field.FieldName = DBFieldNameTxtbxArr[i].Text;
+                    field.IsRequired = ((CheckBox)IsRequiredChkbxArr[i]).Checked;
+                    fields.Add(field);
+
+                }
+                SmartDocConfig smartDocConfig = new SmartDocConfig(fields, DBNameTxtbxArr[0].Text, TableNameTxtbxArr[0].Text);
+                SmartDoc.MakeSmartDoc(smartDocConfig);
+
+            }
+            else
+            {
+                MessageBox.Show("You DID NOT correctly filled out the form!");
+            }
         }
 
         
@@ -181,6 +202,8 @@ namespace SmartDocSystem
         {
             Application.Exit();
         }
+
+       
     }
 
 
