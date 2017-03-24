@@ -214,7 +214,8 @@ namespace SmartDocSystem
                 new XDocument(
                     new XElement(field.FieldName, 
                     new XAttribute("Datatype", field.DataType), 
-                    new XAttribute("Required", field.IsRequired),"Your Answer here"));
+                    new XAttribute("Required", field.IsRequired),
+                    new XAttribute("DisplayName",field.DisplayName),"Your Answer here"));
             return xdoc;
         }
 
