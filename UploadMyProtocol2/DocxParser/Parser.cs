@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Web;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
@@ -32,7 +33,7 @@ namespace DocxParser
         {
             if (xdoc == null)
             {
-                doc.Load(@".\People_Person.xml");
+                doc.Load(HttpContext.Current.Server.MapPath("~/XMLTemplates/People_Person.xml"));
             }
             else
             {
@@ -77,7 +78,7 @@ namespace DocxParser
 
         public List<FieldAttributes> GetFields()
         {
-            doc.Load(@".\People_Person.xml");
+            doc.Load(HttpContext.Current.Server.MapPath("~/XMLTemplates/People_Person.xml"));
             List<FieldAttributes> fields = new List<FieldAttributes>();
 
             foreach (XmlNode root in doc.DocumentElement.ChildNodes)

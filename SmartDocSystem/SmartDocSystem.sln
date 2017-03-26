@@ -5,6 +5,30 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartDocSystem", "SmartDocSystem\SmartDocSystem.csproj", "{E46ED5E0-0CB7-42AE-84E5-34609620E2E3}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Desktop1", "..\Desktop1\", "{DE69B852-785F-4493-838E-55C6530AA044}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{39fb67ff-2829-4752-aec5-2835b266167e}|DocxParser.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_60637"
+		Debug.AspNetCompiler.PhysicalPath = "..\Desktop1\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60637\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_60637"
+		Release.AspNetCompiler.PhysicalPath = "..\Desktop1\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60637\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60637"
+		SlnRelativePath = "..\Desktop1\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocxParser", "..\UploadMyProtocol2\DocxParser\DocxParser.csproj", "{39FB67FF-2829-4752-AEC5-2835B266167E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +39,14 @@ Global
 		{E46ED5E0-0CB7-42AE-84E5-34609620E2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E46ED5E0-0CB7-42AE-84E5-34609620E2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E46ED5E0-0CB7-42AE-84E5-34609620E2E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE69B852-785F-4493-838E-55C6530AA044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE69B852-785F-4493-838E-55C6530AA044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE69B852-785F-4493-838E-55C6530AA044}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE69B852-785F-4493-838E-55C6530AA044}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{39FB67FF-2829-4752-AEC5-2835B266167E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39FB67FF-2829-4752-AEC5-2835B266167E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39FB67FF-2829-4752-AEC5-2835B266167E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39FB67FF-2829-4752-AEC5-2835B266167E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

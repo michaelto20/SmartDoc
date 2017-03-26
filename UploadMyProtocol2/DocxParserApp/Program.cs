@@ -12,7 +12,7 @@ namespace DocxParserApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void ParseSmartDoc(string smartDocFileName)
         {
 
             // Read a docx file and parse it.
@@ -20,7 +20,7 @@ namespace DocxParserApp
             string doc2 = "";
 
             // Get Smart Doc fields
-            var srcfname = @".\SmartDocForm.docx";
+            var srcfname = @".\"+ smartDocFileName;
             var dstfname = @".\test.docx";
             File.Delete(dstfname);
             File.Copy(srcfname, dstfname);

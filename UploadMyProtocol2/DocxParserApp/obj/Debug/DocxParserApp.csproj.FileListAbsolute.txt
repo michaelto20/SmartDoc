@@ -29,3 +29,7 @@ C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxPar
 C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\bin\Debug\DocxParser.pdb
 C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\obj\Debug\DocxParserApp.csprojResolveAssemblyReference.cache
+C:\Users\Michael Townsend\Desktop\Development\Capstone\SmartDoc\UploadMyProtocol2\DocxParserApp\bin\Debug\DocxParserApp.exe.config
+C:\Users\Michael Townsend\Desktop\Development\Capstone\SmartDoc\UploadMyProtocol2\DocxParserApp\obj\Debug\DocxParserApp.exe
+C:\Users\Michael Townsend\Desktop\Development\Capstone\SmartDoc\UploadMyProtocol2\DocxParserApp\obj\Debug\DocxParserApp.pdb
+C:\Users\Michael Townsend\Desktop\Development\Capstone\SmartDoc\UploadMyProtocol2\DocxParserApp\obj\Debug\DocxParserApp.csprojResolveAssemblyReference.cache

@@ -46,9 +46,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DocxParser\DocxParser.csproj">
       <Project>{39fb67ff-2829-4752-aec5-2835b266167e}</Project>
       <Name>DocxParser</Name>
