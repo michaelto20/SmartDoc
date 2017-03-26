@@ -13,11 +13,12 @@
             });
 
             $("#btnUpload").click(function () {
-                $.post("http://localhost:60637/UploadHandler.ashx", { path: path }, function (data) {
-                    
-                //$.post("UploadHandler.ashx", { path: path }, function (data) {
-                    var d = data.split(':');
-                    $("#res").html("File Name : " + d[0] + "<br/> Size : " + d[1] + "<br/>Type: " + d[2]);
+
+                $.post("UploadHandler.ashx", { path: path }, function (data) {
+                    //var d = data.split(':');
+                    var d = data;
+                    alert(d);
+                    //$("#res").html("File Name : " + d[0] + "<br/> Size : " + d[1] + "<br/>Type: " + d[2] + "<br/> : " + d[3]);
                 });
             });
 
