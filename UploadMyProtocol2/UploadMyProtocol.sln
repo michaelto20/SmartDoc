@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocxParserApp", "DocxParserApp\DocxParserApp.csproj", "{FE9F43DE-7513-45A9-B5B9-1BA931342860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocxParser", "DocxParser\DocxParser.csproj", "{39FB67FF-2829-4752-AEC5-2835B266167E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE9F43DE-7513-45A9-B5B9-1BA931342860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9F43DE-7513-45A9-B5B9-1BA931342860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9F43DE-7513-45A9-B5B9-1BA931342860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9F43DE-7513-45A9-B5B9-1BA931342860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39FB67FF-2829-4752-AEC5-2835B266167E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39FB67FF-2829-4752-AEC5-2835B266167E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39FB67FF-2829-4752-AEC5-2835B266167E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39FB67FF-2829-4752-AEC5-2835B266167E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

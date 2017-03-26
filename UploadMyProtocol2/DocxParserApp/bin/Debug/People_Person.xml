@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<People>
+  <Person>
+    <fName Datatype="String" Required="true" DisplayName="First Name">Your Answer here</fName>
+    <lName Datatype="String" Required="true" DisplayName="Last Name">Your Answer here</lName>
+    <Comments Datatype="String" Required="false" DisplayName="Comments">Your Answer here</Comments>
+  </Person>
+</People>

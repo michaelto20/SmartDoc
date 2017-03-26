@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><People>
+  <Person>
+    <fName Datatype="String" Required="true" DisplayName="First Name">Michael</fName>
+    <lName Datatype="String" Required="true" DisplayName="Last Name">Townsend</lName>
+    <Comments Datatype="String" Required="false" DisplayName="Comments">Please and Thank you</Comments>
+  </Person>
+</People>

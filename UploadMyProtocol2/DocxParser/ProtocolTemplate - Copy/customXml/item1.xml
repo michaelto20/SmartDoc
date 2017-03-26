@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><AzProtocol xmlns="http://schemas.appvizo.com/aztech/protocol">
+  <protocolID>
+  </protocolID>
+  <investigator>
+    <name>   Elmer Fudd </name>
+    <phone>
+    </phone>
+    <email>Elizabeth@appvizo.com   </email>
+    <alternateName>
+    </alternateName>
+    <alternatePhone>
+    </alternatePhone>
+    <alternateEmail>
+    </alternateEmail>
+  </investigator>
+  <title>Fuddruckers Hamburgers</title>
+  <laySummary>
+  Lots of cool stuff</laySummary>
+  <aims>
+  </aims>
+  <fundingSources>
+    <fundingSource>
+      <fundType>
+      </fundType>
+      <fundName>
+      </fundName>
+      <fundTitle>
+      </fundTitle>
+    </fundingSource>
+  </fundingSources>
+  <collaboration>
+  </collaboration>
+  <animalTissue>
+  </animalTissue>
+  <speciesList>
+    <species>
+      <name>     Rat </name>
+      <painCategory>
+      </painCategory>
+    </species>
+  </speciesList>
+  <experimentalDesign>
+  </experimentalDesign>
+  <surgicalTYpes>
+    <surgery>
+      <speciesName>
+      </speciesName>
+      <surgeryType>
+      </surgeryType>
+      <classification>
+      </classification>
+      <procedure>
+      </procedure>
+      <locations>
+        <location>
+          <building>
+          </building>
+          <room>
+          </room>
+        </location>
+      </locations>
+    </surgery>
+  </surgicalTYpes>
+  <biohazards>
+  </biohazards>
+  <drugs>
+  </drugs>
+  <euthanasiaMethods>
+  </euthanasiaMethods>
+  <personnel>
+    <person>
+    </person>
+  </personnel>
+  <aalacReporting>
+    <survivalSurgery>
+    </survivalSurgery>
+    <prolongedRestraint>true</prolongedRestraint>
+    <multipleMajorSurgeries>
+    </multipleMajorSurgeries>
+    <hazardousAgents>true</hazardousAgents>
+    <foodFluidRestrictions>
+    </foodFluidRestrictions>
+    <noncentralizedAreas>
+    </noncentralizedAreas>
+  </aalacReporting>
+</AzProtocol>
