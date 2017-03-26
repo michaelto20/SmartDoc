@@ -12,7 +12,10 @@ public class UploadHandler : IHttpHandler {
 
         FileInfo fn = new FileInfo(path);
         fn.CopyTo(context.Server.MapPath("~/Upload/" + fn.Name));
-        context.Response.Write(fn.Name + ":" + fn.Length + ":" + fn.Extension);
+        //string fields = Parser(fn.Name);
+        //context.Response.Write(fields);
+   
+        //context.Response.Write(fn.Name + ":" + fn.Length + ":" + fn.Extension + ":" + fn.FullName);
     }
 
     public bool IsReusable{
