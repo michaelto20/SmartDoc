@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProtocolDataSet" targetNamespace="http://schemas.appvizo.com/aztech/protocol" xmlns:mstns="http://schemas.appvizo.com/aztech/protocol" xmlns="http://schemas.appvizo.com/aztech/protocol" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="AzProtocol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="protocolID" type="xs:string" minOccurs="0" />
+        <xs:element name="title" type="xs:string" minOccurs="0" />
+        <xs:element name="investigator" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="primary" type="xs:boolean" minOccurs="1" default="true" />
+              <xs:element name="name" type="xs:string" minOccurs="1" />
+              <xs:element name="phone" type="xs:string" minOccurs="0" />
+              <xs:element name="email" type="xs:string" minOccurs="0" />
+              <xs:element name="alternateName" type="xs:string" minOccurs="0" />
+              <xs:element name="alternatePhone" type="xs:string" minOccurs="0" />
+              <xs:element name="alternateEmail" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="laySummary" type="xs:string" minOccurs="0" />
+        <xs:element name="aims" type="xs:string" minOccurs="0" />
+        <xs:element name="collaboration" type="xs:string" minOccurs="0" />
+        <xs:element name="animalTissue" type="xs:string" minOccurs="0" />
+        <xs:element name="experimentalDesign" type="xs:string" minOccurs="0" />
+        <xs:element name="biohazards" type="xs:string" minOccurs="0" />
+        <xs:element name="drugs" type="xs:string" minOccurs="0" />
+        <xs:element name="euthanasiaMethods" type="xs:string" minOccurs="0" />
+        <xs:element name="fundingSources" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fundingSource" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="fundType" type="xs:string" minOccurs="0" />
+                    <xs:element name="fundName" type="xs:string" minOccurs="0" />
+                    <xs:element name="fundTitle" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="speciesList" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="species" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="speciesName" type="xs:string" minOccurs="0" />
+                    <xs:element name="speciesNumber" type="xs:string" minOccurs="0" default="0" />
+                    <xs:element name="painCategory" type="xs:string" minOccurs="0" default="B" />
+                    <xs:element name="survivalSurgery" type="xs:boolean" minOccurs="0" />
+                    <xs:element name="prolongedRestraint" type="xs:boolean" minOccurs="0" />
+                    <xs:element name="multipleMajorSurgeries" type="xs:boolean" minOccurs="0" />
+                    <xs:element name="hazardousAgents" type="xs:boolean" minOccurs="0" />
+                    <xs:element name="foodFluidRestrictions" type="xs:boolean" minOccurs="0" />
+                    <xs:element name="noncentralizedAreas" type="xs:boolean" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="surgeryList" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="surgery" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="speciesName" type="xs:string" minOccurs="0" />
+                    <xs:element name="surgeryType" type="xs:string" minOccurs="0" />
+                    <xs:element name="classification" type="xs:string" minOccurs="0" />
+                    <xs:element name="procedure" type="xs:string" minOccurs="0" />
+                    <xs:element name="locations" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="location" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="building" type="xs:string" minOccurs="0" />
+                                <xs:element name="room" type="xs:string" minOccurs="0" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="personnel" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="person" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="fullName" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProtocolDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="1">
+        <xs:element ref="AzProtocol" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -199,6 +199,7 @@ namespace SmartDocSystem
                     new XDocument(
                         new XDeclaration("1.0", "utf-8", "yes"),
                         new XElement(sdConfig.DatabaseName,
+                        new XAttribute("SDTemplate", xmlDoc),
                             new XElement(sdConfig.TableName,
                                 from field in sdConfig.Fields
                                 select GetFieldToXML(field).Elements())));

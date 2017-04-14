@@ -14,7 +14,8 @@
 
             $("#btnUpload").click(function () {
 
-                $.post("UploadHandler.ashx", { path: path }, function (data) {
+                $.post("http://localhost:60637/UploadHandler.ashx", { path: path }, function (data) {
+                    // Add extra line for deployment url
                     //var d = data.split(':');
                     var d = data;
                     alert(d);

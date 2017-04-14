@@ -1,0 +1,34 @@
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\bin\Debug\DocxParserApp.exe.config
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\bin\Debug\Stephen Black Protocol Mouse.docx
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\bin\Debug\DocxParserApp.exe
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\bin\Debug\DocxParserApp.pdb
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\bin\Debug\DocxParser.dll
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\bin\Debug\DocxParser.pdb
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\obj\Debug\DocxParserApp.csprojResolveAssemblyReference.cache
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\obj\Debug\DocxParserApp.exe
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\obj\Debug\DocxParserApp.pdb
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\bin\Debug\ProtocolTemplate.docx
+C:\Projects\Sandbox\MVC\UploadMyProtocol\DocxParserApp\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\bin\Debug\DocxParserApp.exe.config
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\obj\Debug\DocxParserApp.exe
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\obj\Debug\DocxParserApp.pdb
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\bin\Debug\ProtocolTemplate.docx
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\bin\Debug\Stephen Black Protocol Mouse.docx
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\bin\Debug\DocxParserApp.exe
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\bin\Debug\DocxParserApp.pdb
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\bin\Debug\DocxParser.dll
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\bin\Debug\DocxParser.pdb
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol\DocxParserApp\obj\Debug\DocxParserApp.csprojResolveAssemblyReference.cache
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\bin\Debug\DocxParserApp.exe.config
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\obj\Debug\DocxParserApp.exe
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\obj\Debug\DocxParserApp.pdb
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\bin\Debug\DocxParserApp.exe
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\bin\Debug\DocxParserApp.pdb
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\bin\Debug\DocxParser.dll
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\bin\Debug\DocxParser.pdb
+C:\Users\Michael Townsend\Desktop\Development\Capstone\UploadMyProtocol2\DocxParserApp\obj\Debug\DocxParserApp.csprojResolveAssemblyReference.cache
+C:\Users\Michael Townsend\Desktop\Development\Capstone\SmartDoc\UploadMyProtocol2\DocxParserApp\bin\Debug\DocxParserApp.exe.config
+C:\Users\Michael Townsend\Desktop\Development\Capstone\SmartDoc\UploadMyProtocol2\DocxParserApp\obj\Debug\DocxParserApp.exe
+C:\Users\Michael Townsend\Desktop\Development\Capstone\SmartDoc\UploadMyProtocol2\DocxParserApp\obj\Debug\DocxParserApp.pdb

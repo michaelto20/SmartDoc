@@ -20,25 +20,38 @@ namespace DocxParser
     public class Parser
     {
         public string Filename { get; set; }
+        public XmlDocument doc = new XmlDocument();
 
         public Parser(string filename)
         {
             this.Filename = filename;
+            try
+            {
+                using (StreamReader tx = new StreamReader(filename))
+                {
+                    doc.Load(tx);
+                }
+    
+            }
+            catch(Exception ex)
+            {
+                string message = ex.Message;
+            }
             
         }
 
-        public XmlDocument doc = new XmlDocument();
+        
 
         public string GetXML(string xdoc = null)
         {
-            if (xdoc == null)
-            {
-                doc.Load(HttpContext.Current.Server.MapPath("~/XMLTemplates/People_Person.xml"));
-            }
-            else
-            {
-                doc.LoadXml(xdoc);
-            }
+            //if (xdoc == null)
+            //{
+            //    doc.Load(HttpContext.Current.Server.MapPath("~/XMLTemplates/People_Person.xml"));
+            //}
+            //else
+            //{
+            //    doc.LoadXml(xdoc);
+            //}
 
             string text = doc.DocumentElement.Name;
             foreach (XmlNode root in doc.DocumentElement.ChildNodes)
@@ -139,6 +152,34 @@ namespace DocxParser
             }
 
             return xdoc;
+        }
+
+        public string GetTemplateName()
+        {
+            //var xdoc = XDocument.Load(@newFile);
+
+            string templateName = "";
+            //var xdoc = XDocument.Parse(doc.OuterXml);
+
+            XmlNodeList elemList = doc.GetElementsByTagName(doc.FirstChild.Name);
+            for (int i = 0; i < elemList.Count; i++)
+            {
+                string attrVal = elemList[i].Attributes["SDTemplate"].Value;
+            }
+
+            //var items = from i in xdoc.Descendants("Item")
+            //            select new
+            //            {
+            //                SDTemplate = (string)i.Attribute("SDTemplate"),
+            //            };
+
+            //foreach (var s in items)
+            //{
+            //    templateName += s;
+            //}
+
+
+            return templateName;
         }
 
 
