@@ -21,37 +21,26 @@ namespace DocxParser
     {
         public string Filename { get; set; }
         public XmlDocument doc = new XmlDocument();
+        string templateName;
 
         public Parser(string filename)
         {
             this.Filename = filename;
-            try
-            {
-                using (StreamReader tx = new StreamReader(filename))
-                {
-                    doc.Load(tx);
-                }
-    
-            }
-            catch(Exception ex)
-            {
-                string message = ex.Message;
-            }
-            
+           
         }
 
         
 
         public string GetXML(string xdoc = null)
         {
-            //if (xdoc == null)
-            //{
-            //    doc.Load(HttpContext.Current.Server.MapPath("~/XMLTemplates/People_Person.xml"));
-            //}
-            //else
-            //{
-            //    doc.LoadXml(xdoc);
-            //}
+            if (xdoc == null)
+            {
+                doc.Load(HttpContext.Current.Server.MapPath("~/XMLTemplates/"+templateName));
+            }
+            else
+            {
+                doc.LoadXml(xdoc);
+            }
 
             string text = doc.DocumentElement.Name;
             foreach (XmlNode root in doc.DocumentElement.ChildNodes)
@@ -77,7 +66,7 @@ namespace DocxParser
             {
                 foreach (XmlNode node in root.ChildNodes)
                 {
-                    string fieldName = node.Name.Trim();
+                    string fieldName = node.Attributes["DisplayName"]?.InnerText.Trim();
                     string value = node.InnerText;
                     FieldValues fieldValue = new FieldValues(fieldName, value);
                     fieldValues.Add(fieldValue);
@@ -91,7 +80,7 @@ namespace DocxParser
 
         public List<FieldAttributes> GetFields()
         {
-            doc.Load(HttpContext.Current.Server.MapPath("~/XMLTemplates/People_Person.xml"));
+            doc.Load(HttpContext.Current.Server.MapPath("~/XMLTemplates/"+templateName));
             List<FieldAttributes> fields = new List<FieldAttributes>();
 
             foreach (XmlNode root in doc.DocumentElement.ChildNodes)
@@ -103,7 +92,7 @@ namespace DocxParser
                     string dataType = node.Attributes["Datatype"]?.InnerText;
                     string Required = node.Attributes["Required"]?.InnerText;
                     isRequired = Required.Equals("true");
-                    string fieldName = node.Name.Trim();
+                    string fieldName = node.Attributes["DisplayName"]?.InnerText.Trim();
                     FieldAttributes field = new FieldAttributes(fieldName,dataType, isRequired);
                     fields.Add(field);
                 }
@@ -154,32 +143,19 @@ namespace DocxParser
             return xdoc;
         }
 
-        public string GetTemplateName()
+        public void GetTemplateName(XDocument xdoc)
         {
-            //var xdoc = XDocument.Load(@newFile);
-
-            string templateName = "";
-            //var xdoc = XDocument.Parse(doc.OuterXml);
-
-            XmlNodeList elemList = doc.GetElementsByTagName(doc.FirstChild.Name);
-            for (int i = 0; i < elemList.Count; i++)
+            string tName = "";
+            try
             {
-                string attrVal = elemList[i].Attributes["SDTemplate"].Value;
+                tName = xdoc.Root.Attribute("SDTemplate").Value;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
 
-            //var items = from i in xdoc.Descendants("Item")
-            //            select new
-            //            {
-            //                SDTemplate = (string)i.Attribute("SDTemplate"),
-            //            };
-
-            //foreach (var s in items)
-            //{
-            //    templateName += s;
-            //}
-
-
-            return templateName;
+            templateName = tName;
         }
 
 

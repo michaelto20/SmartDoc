@@ -42,14 +42,14 @@
             this.TableNameTxtbx = new System.Windows.Forms.TextBox();
             this.TableNamelbl = new System.Windows.Forms.Label();
             this.FieldGrpBx = new System.Windows.Forms.GroupBox();
+            this.DisplayNameTxtbx = new System.Windows.Forms.TextBox();
+            this.DisplayFieldNamelbl = new System.Windows.Forms.Label();
             this.RequiredChkbx = new System.Windows.Forms.CheckBox();
             this.DataTypeDDbx = new System.Windows.Forms.ComboBox();
             this.Datatypelbl = new System.Windows.Forms.Label();
             this.DBFieldNameTxtbx = new System.Windows.Forms.TextBox();
             this.DBFieldNamelbl = new System.Windows.Forms.Label();
             this.FieldGrp = new System.Windows.Forms.GroupBox();
-            this.DisplayFieldNamelbl = new System.Windows.Forms.Label();
-            this.DisplayNameTxtbx = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.mainLayoutPanel.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -107,7 +107,7 @@
             // Createbtn
             // 
             this.Createbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Createbtn.Location = new System.Drawing.Point(728, 530);
+            this.Createbtn.Location = new System.Drawing.Point(728, 550);
             this.Createbtn.Name = "Createbtn";
             this.Createbtn.Padding = new System.Windows.Forms.Padding(5);
             this.Createbtn.Size = new System.Drawing.Size(138, 33);
@@ -119,7 +119,7 @@
             // Cancelbtn
             // 
             this.Cancelbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Cancelbtn.Location = new System.Drawing.Point(361, 530);
+            this.Cancelbtn.Location = new System.Drawing.Point(361, 550);
             this.Cancelbtn.Name = "Cancelbtn";
             this.Cancelbtn.Padding = new System.Windows.Forms.Padding(5);
             this.Cancelbtn.Size = new System.Drawing.Size(75, 33);
@@ -137,7 +137,7 @@
             this.mainLayoutPanel.Controls.Add(this.FieldGrpBx);
             this.mainLayoutPanel.Location = new System.Drawing.Point(119, 98);
             this.mainLayoutPanel.Name = "mainLayoutPanel";
-            this.mainLayoutPanel.Size = new System.Drawing.Size(958, 407);
+            this.mainLayoutPanel.Size = new System.Drawing.Size(958, 446);
             this.mainLayoutPanel.TabIndex = 7;
             // 
             // groupBox3
@@ -208,6 +208,22 @@
             this.FieldGrpBx.TabStop = false;
             this.FieldGrpBx.Text = "Field";
             // 
+            // DisplayNameTxtbx
+            // 
+            this.DisplayNameTxtbx.Location = new System.Drawing.Point(133, 64);
+            this.DisplayNameTxtbx.Name = "DisplayNameTxtbx";
+            this.DisplayNameTxtbx.Size = new System.Drawing.Size(285, 22);
+            this.DisplayNameTxtbx.TabIndex = 4;
+            // 
+            // DisplayFieldNamelbl
+            // 
+            this.DisplayFieldNamelbl.AutoSize = true;
+            this.DisplayFieldNamelbl.Location = new System.Drawing.Point(17, 65);
+            this.DisplayFieldNamelbl.Name = "DisplayFieldNamelbl";
+            this.DisplayFieldNamelbl.Size = new System.Drawing.Size(95, 17);
+            this.DisplayFieldNamelbl.TabIndex = 6;
+            this.DisplayFieldNamelbl.Text = "Display Name";
+            // 
             // RequiredChkbx
             // 
             this.RequiredChkbx.AutoSize = true;
@@ -263,27 +279,11 @@
             this.FieldGrp.TabIndex = 0;
             this.FieldGrp.TabStop = false;
             // 
-            // DisplayFieldNamelbl
-            // 
-            this.DisplayFieldNamelbl.AutoSize = true;
-            this.DisplayFieldNamelbl.Location = new System.Drawing.Point(17, 65);
-            this.DisplayFieldNamelbl.Name = "DisplayFieldNamelbl";
-            this.DisplayFieldNamelbl.Size = new System.Drawing.Size(95, 17);
-            this.DisplayFieldNamelbl.TabIndex = 6;
-            this.DisplayFieldNamelbl.Text = "Display Name";
-            // 
-            // DisplayNameTxtbx
-            // 
-            this.DisplayNameTxtbx.Location = new System.Drawing.Point(133, 64);
-            this.DisplayNameTxtbx.Name = "DisplayNameTxtbx";
-            this.DisplayNameTxtbx.Size = new System.Drawing.Size(285, 22);
-            this.DisplayNameTxtbx.TabIndex = 4;
-            // 
             // SmartDocSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 606);
+            this.ClientSize = new System.Drawing.Size(1177, 637);
             this.Controls.Add(this.mainLayoutPanel);
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.Createbtn);

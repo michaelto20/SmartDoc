@@ -197,7 +197,7 @@ namespace SmartDocSystem
             {
                 XDocument xdoc =
                     new XDocument(
-                        new XDeclaration("1.0", "utf-8", "yes"),
+                        new XDeclaration("1.0", "utf-8", "no"),
                         new XElement(sdConfig.DatabaseName,
                         new XAttribute("SDTemplate", xmlDoc),
                             new XElement(sdConfig.TableName,

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Studen SDTemplate="Studen_Info.xml">
+  <Info>
+    <fName Datatype="String" Required="true" DisplayName="First Name">Your Answer here</fName>
+    <ssn Datatype="Integer" Required="true" DisplayName="Social Security Number">Your Answer here</ssn>
+  </Info>
+</Studen>
